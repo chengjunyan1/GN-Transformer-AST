@@ -97,26 +97,3 @@ class CodeTokenizer(Tokenizer):
         #     w+=ws[i]
         #     if i!=len(ws)-1: w+=sep
         return ws
-
-
-if __name__=='__main__':
-    """
-    单个字母后面加数字不拆 a0 -> a0 , a00 -> a00, 这条优先于第四、五条 i18n -> i18 n
-    一个小写一个大写不拆 pX -> pX 
-    多字母要拆 aaa0 -> aaa 0 前面就算只有两个字母也要拆
-    字母数字字母要拆  aa0a -> aa 0 a 后面是小写也拆
-    前数字后字母要拆 15MIN -> 15 MIN
-    
-    补丁：
-    扫描分词结果
-    先找单个小写字母，如果后面是单个大写，则拼起来(下划线分的就不拼)
-    细分割：拆开数字字母混合词，拆完后如果发现数字前是单个字母，则拼上去
-    
-    """
-    T=CodeTokenizer()
-    s='nA'#'decodeBase256Segment'
-    q=T.tokenize(s)
-    print(q)
-    
-    
-    
