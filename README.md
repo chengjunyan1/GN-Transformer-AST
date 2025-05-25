@@ -1,6 +1,6 @@
 # GN-Transformer AST
 
-This is the official repository for the paper "GN-Transformer: Fusing AST and Source Code information in Graph Networks".
+This is the official repository for the paper "[GN-Transformer: Fusing AST and Source Code information in Graph Networks](https://arxiv.org/abs/2112.00663)".
 
 ## Data Preparing
 
@@ -63,3 +63,18 @@ Python: https://drive.google.com/file/d/1tk3Wc4YpSo_oLKCi6h3Kitvsux3vWFUO/view?u
 Or directly run download_models.sh in ./models to download the trained models.
 
 
+
+### Citation
+If you use this code in your research, please cite the following paper:
+
+``` bibtex
+@misc{cheng2021gntransformerfusingsequencegraph,
+      title={GN-Transformer: Fusing Sequence and Graph Representation for Improved Code Summarization}, 
+      author={Junyan Cheng and Iordanis Fostiropoulos and Barry Boehm},
+      year={2021},
+      eprint={2111.08874},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2111.08874}, 
+}
+```
